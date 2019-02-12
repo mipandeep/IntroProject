@@ -1,4 +1,5 @@
 class University < ApplicationRecord
   belongs_to :country
-  belongs_to :website
+  has_many :uniwebs
+  has_many :websites , through: :uniwebs
 end
