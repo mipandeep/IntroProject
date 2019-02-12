@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'net/http'
+require 'json'
+require 'pp'
+
+
+# uri = "https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json"
+# result = JSON.parse(Net::HTTP.get(URI.parse(uri)))
+
+# result.each do |uni|
+
+#     web = Website.create(webpage: uni["web_pages"])
+
