@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_001157) do
+ActiveRecord::Schema.define(version: 2019_02_12_004611) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2019_02_12_001157) do
     t.string "dean"
     t.index ["country_id"], name: "index_universities_on_country_id"
     t.index ["website_id"], name: "index_universities_on_website_id"
+  end
+
+  create_table "uniwebs", force: :cascade do |t|
+    t.integer "website_id"
+    t.integer "university_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["university_id"], name: "index_uniwebs_on_university_id"
+    t.index ["website_id"], name: "index_uniwebs_on_website_id"
   end
 
   create_table "websites", force: :cascade do |t|
