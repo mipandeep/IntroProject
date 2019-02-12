@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_11_235913) do
+ActiveRecord::Schema.define(version: 2019_02_12_000350) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.string "alpha_code"
+    t.string "state_province"
+    t.string "domain"
+    t.integer "country_id"
+    t.integer "website_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_universities_on_country_id"
+    t.index ["website_id"], name: "index_universities_on_website_id"
   end
 
   create_table "websites", force: :cascade do |t|

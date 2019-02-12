@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alpha_code: MyString
+  state_province: MyString
+  domain: MyString
+  country: one
+  website: one
+
+two:
+  name: MyString
+  alpha_code: MyString
+  state_province: MyString
+  domain: MyString
+  country: two
+  website: two
