@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_004611) do
+ActiveRecord::Schema.define(version: 2019_02_12_004857) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
@@ -24,12 +24,10 @@ ActiveRecord::Schema.define(version: 2019_02_12_004611) do
     t.string "state_province"
     t.string "domain"
     t.integer "country_id"
-    t.integer "website_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "dean"
     t.index ["country_id"], name: "index_universities_on_country_id"
-    t.index ["website_id"], name: "index_universities_on_website_id"
   end
 
   create_table "uniwebs", force: :cascade do |t|
