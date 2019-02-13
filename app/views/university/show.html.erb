@@ -1,0 +1,13 @@
+<h1><%= @u.name %></h1>
+<p><b> University Details</b></p>
+
+<p>University Name : <%= @u.name %></p>
+<p>Alpha Code : <%= @u.alpha_code %></p>
+<p>Dean : <%= @u.dean  %></p>
+<p>State/Province : <%= @u.state_province %></p>
+<p>Country : <%= @u.country.name %></p>
+
+<p><b>University Websites:</b></p>
+<% @u.websites.each do |w| %>
+    <p><a href="<%=w.webpage%>"><%=w.webpage%></a></p>
+<%end%>
