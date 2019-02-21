@@ -1,6 +1,6 @@
 class UniversityController < ApplicationController
   def index
-    @univerities = University.all
+    @univerities = University.all.page params[:page]
   end
 
   def show

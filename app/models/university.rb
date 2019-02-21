@@ -7,4 +7,7 @@ class University < ApplicationRecord
   validates :alpha_code , presence: true
   validates :state_province , presence: true
   validates :dean , presence: true
+
+  paginates_per 10
+
 end

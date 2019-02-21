@@ -1,5 +1,7 @@
 <h1>Universities</h1>
 
+<%= paginate @univerities%>
+
 <% @univerities.each do |u| %>
 
     <p><%= link_to "#{u.name}",university_show_path(:id => u.id) %> -  <%= u.country.name %></p>

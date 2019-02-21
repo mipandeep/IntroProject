@@ -51,6 +51,8 @@ group :development do
   gem 'faker'
 
   gem 'rails-erd'
+
+  gem 'kaminari'
 end
 
 group :test do
