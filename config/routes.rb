@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'country/index'
+  get 'country/show'
   get 'university/index'
   get 'university/show'
   get 'about/home'
