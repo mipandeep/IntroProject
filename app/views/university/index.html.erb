@@ -4,7 +4,7 @@
 
 <% @univerities.each do |u| %>
 
-    <p><%= link_to "#{u.name}",university_show_path(:id => u.id) %> -  <%= u.country.name %></p>
+    <p><%= link_to "#{u.name}",u %> -  <%= u.country.name %></p>
     
     
 <% end %>

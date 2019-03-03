@@ -1,2 +1,9 @@
-<h1>Country#index</h1>
-<p>Find me in app/views/country/index.html.erb</p>
+<h1>Countries</h1>
+
+<%= paginate @countries%>
+
+<% @countries.each do |c|%>
+
+<p><%=c.name%> <%=link_to 'See Universities', c %></p>
+
+<%end%>
