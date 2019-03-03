@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search/results'
   # get 'country/index'
   # get 'country/show'
   # get 'university/index'
