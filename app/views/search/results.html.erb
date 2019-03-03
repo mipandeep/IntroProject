@@ -1,2 +1,14 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+<h1>Search Results</h1>
+<% if @universities.count == 1 %>
+  <p><%= @universities.count %> result found.</p>
+  <%else%>
+  <p><%= @universities.count %> results found.</p>
+<% end %>
+
+
+<% @universities.each do |u| %>
+
+    <p><%= link_to "#{u.name}",u %> -  <%= u.country.name %></p>
+    
+    
+<% end %>

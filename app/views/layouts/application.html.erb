@@ -15,6 +15,14 @@
       <li><%= link_to 'Universities', university_index_path %></li>
       <li><%= link_to 'Countries', country_index_path %></li>
     </ul>
+    <div id = "search">
+          <%= form_tag(results_search_index_path, method: "get") do %>
+            <%= label_tag(:q, "Search:") %>
+            <%= text_field_tag(:q) %>
+            <%= collection_select(:query_country , :country_id , Country.all.order(:name), :id ,:name,{:include_blank => 'University Name'})%>
+            <%= submit_tag("Search") %>
+          <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
